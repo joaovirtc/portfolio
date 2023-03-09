@@ -14,14 +14,17 @@ const Projetos = () => {
               titleResponsive={"Projetos"}
               subtitle={"Explore meus projetos"}
             />
-            <a href="https://github.com/joaovirtc/pyBank">
+            <a href="https://github.com/joaovirtc/pyBank" target={"_blank"}>
               <div className="w-72 py-5 border-b border-slate-100 flex justify-between mb-10">
                 <h1 className="text-red-500 text-lg font-bold">pyBank</h1>
                 <RiArrowDropRightLine size={20} color={"#fff"} />
               </div>
             </a>
 
-            <a href="https://github.com/joaovirtc/ui-figma-jam">
+            <a
+              href="https://github.com/joaovirtc/ui-figma-jam"
+              target={"_blank"}
+            >
               <div className="w-72 py-5 border-b border-slate-100 flex justify-between mb-10">
                 <h1 className="text-purple-500 text-lg font-bold">FigJam</h1>
                 <RiArrowDropRightLine size={20} color={"#fff"} />
@@ -37,6 +40,7 @@ const Projetos = () => {
               <a
                 href="https://github.com/joaovirtc"
                 className="text-blue-600 font-medium hover:underline"
+                target={"_blank"}
               >
                 Ver repositórios
               </a>
