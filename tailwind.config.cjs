@@ -13,6 +13,9 @@ module.exports = {
           100: "#4D4D4D",
         },
       },
+      backgroundImage: {
+        backgroundSobreMim: "url('/src/assets/backgroundSobreMim.png')",
+      },
     },
   },
   plugins: [],

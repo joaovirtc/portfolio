@@ -11,7 +11,7 @@ export default function MenuCard({ title, description }: cardsProps) {
     <>
       <div className="flex justify-center items-center">
         <Fade bottom delay={1000}>
-          <div className=" m-4 w-96 bg-zinc-200 flex flex-col justify-evenly items-start rounded-lg cursor-pointer transition-colors hover:bg-zinc-300 max-[768px]:items-center ">
+          <div className=" m-4 w-96 bg-zinc-200 flex flex-col justify-evenly items-start rounded-lg cursor-pointer transition-colors hover:bg-zinc-300 max-[768px]:items-center max-[768px]:w-[23rem] ">
             <div className="w-[100%] flex items-start px-7 py-7">
               <h1 className="text-white text-2xl font-medium pr-4">{title}</h1>
               <RiArrowRightUpLine color="#fff" />
