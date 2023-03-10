@@ -3,12 +3,13 @@ import Cards from "../../components/menuCard";
 import { Link } from "react-router-dom";
 import { RiLinkedinFill } from "react-icons/ri";
 import { RiMailSendLine } from "react-icons/ri";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import { RxCopy } from "react-icons/rx";
+import { useCopyToClipboard } from "usehooks-ts";
 import { useState } from "react";
 
 const Contato = () => {
-  const [value, setValue] = useState("");
-  const [copiado, setCopiado] = useState(false);
+  const [value, copy] = useCopyToClipboard();
+  const Email = `joaovictorcarmindo@gmail.com`;
 
   return (
     <>
@@ -25,19 +26,28 @@ const Contato = () => {
               <a
                 target={"_blank"}
                 href="https://www.linkedin.com/in/joaovirtc/"
-                className=" cursor-pointer flex justify-start items-center w-80 h-10 p-5  bg-zinc-200 text-white rounded-lg  mt-4 transition-colors hover:bg-zinc-300"
+                className=" cursor-pointer flex justify-evenly items-center w-80 h-10 py-7  bg-zinc-200 text-white rounded-lg  mt-4 transition-colors hover:bg-zinc-300"
               >
                 <RiLinkedinFill color="#0066CC" size={23} />
-                <h1 className="ml-10 font-normal ">Conectar com LinkedIn</h1>
+                <div className=" w-[80%] flex items-center justify-center">
+                  <h1 className=" font-normal ">Conectar com LinkedIn</h1>
+                </div>
               </a>
-              <a
-                target={"_blank"}
-                href="https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=CllgCJlGVBCgBPBwdGCmcdnCVMsPTQsQlGbLxcgBzphndVwhJpCXdVZvdHJHPfkxfXfxfPjmDnV"
-                className=" cursor-pointer flex justify-start items-center w-80 h-10 p-5  bg-zinc-200 text-white rounded-lg  mt-4 transition-colors hover:bg-zinc-300"
+              <div
+                onClick={() => {
+                  copy(Email);
+                }}
+                className=" cursor-text flex justify-evenly items-center w-80 h-10 py-7  bg-zinc-200 text-white rounded-lg  mt-4 transition-colors  "
               >
-                <RiMailSendLine color="#0066CC" size={23} />
-                <h1 className="ml-[5rem] font-normal ">Enviar email</h1>
-              </a>
+                <button className="p-2 bg-zinc-200 rounded-lg transition-colors hover:bg-zinc-300 ">
+                  <RxCopy color="#0066CC" size={23} className="" />
+                </button>
+                <div className=" w-[80%] flex items-center justify-center">
+                  <h1 className=" font-normal ">
+                    joaovictorcarmindo@gmail.com
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
 
